@@ -41,14 +41,12 @@ safeClick(findTestObject('Object Repository/Page_Form DEMOQA/input_userEmail'))
 
 WebUI.setText(findTestObject('Object Repository/Page_Form DEMOQA/input_userEmail'), email)
 
-//WebUI.scrollToElement(findTestObject('Object Repository/Page_Form DEMOQA/input_selectGender'), 5)
 safeClick(findTestObject('Page_Form DEMOQA/input_selectGender', [('gender') : gender]))
 
 safeClick(findTestObject('Object Repository/Page_Form DEMOQA/input_userNumber'))
 
 WebUI.setText(findTestObject('Object Repository/Page_Form DEMOQA/input_userNumber'), noPhone)
 
-//WebUI.scrollToElement(findTestObject('Object Repository/Page_Form DEMOQA/input_dateOfBirthInput'), 0)
 safeClick(findTestObject('Object Repository/Page_Form DEMOQA/input_dateOfBirthInput'))
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/Page_Form DEMOQA/select_monthOfBirth'), monthOfBirth, true)
@@ -63,15 +61,11 @@ WebUI.setText(findTestObject('Object Repository/Page_Form DEMOQA/input_subjects'
 
 safeClick(findTestObject('Object Repository/Page_Form DEMOQA/li_subject'))
 
-// Split berdasarkan koma dan hapus spasi di sekitar tiap item
 List<String> hobbies = hobby.split(/[;,g\s]+/).findAll { it.trim() }
 
 for (String selectHobby in hobbies) {
-//	WebUI.comment("Selecting hobby: " + selectHobby)
 	safeClick(findTestObject('Page_Form DEMOQA/input_selectHobby', [('hobby') : selectHobby]))
 }
-
-//safeClick(findTestObject('Page_Form DEMOQA/input_selectHobby', [('hobby') : hobby]))
 
 safeClick(findTestObject('Object Repository/Page_Form DEMOQA/textarea_currentAddress'))
 
